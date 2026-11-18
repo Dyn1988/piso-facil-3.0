@@ -1,0 +1,8 @@
+{
+  // Publica a pasta "site" como arquivos estáticos. O nome precisa ser igual ao do Worker no painel da Cloudflare.
+  "name": "piso-facil",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./site"
+  }
+}
