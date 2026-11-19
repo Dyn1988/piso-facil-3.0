@@ -292,7 +292,7 @@
     if (cxNames.length && d.kind === "route") rows.push([cxNames.length > 1 ? "Aduanas" : "Aduana", cxNames.join(" + ")]);
     rows.push(["Distância (" + (d.kind === "manual" ? "informada manualmente" : "por rodovias") + ")", n1.format(d.km) + " km"],
       ["Valor por km", brl.format(vkm)], ["Frete (" + n1.format(d.km) + " × " + brl.format(vkm) + ")", brl.format(frete)],
-      ["Valor da mercadoria", brl.format(merc)], ["Advalorem (%)", n2.format(pct) + "%"], ["Valor do Advalorem", brl.format(adv)], ["Total (frete + Advalorem)", brl.format(total)]);
+      ["Valor da mercadoria", brl.format(merc)], ["Advalorem (%)", nIn.format(pct) + "%"], ["Valor do Advalorem", brl.format(adv)], ["Total (frete + Advalorem)", brl.format(total)]);
     bd.innerHTML = rows.map(function (r, i) { return "<div" + (i === rows.length - 1 ? ' class="sum"' : "") + "><span></span><span></span></div>"; }).join("");
     Array.prototype.forEach.call(bd.children, function (el, i) { el.children[0].textContent = rows[i][0]; el.children[1].textContent = rows[i][1]; });
     pl.className = "pill" + (d.kind === "manual" ? "" : " ok");
